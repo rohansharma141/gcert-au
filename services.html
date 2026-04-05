@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Certification Services | Globus Certifications Australia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .sidebar-link.active { border-left-color: #2563eb; color: #1e3a8a; background-color: #eff6ff; font-weight: 600; }
+        .sidebar-link { border-left: 3px solid transparent; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .sidebar-link:hover { background-color: #f8fafc; border-left-color: #cbd5e1; }
+        .sticky-sidebar { height: calc(100vh - 120px); overflow-y: auto; }
+        /* Hide scrollbar for sidebar but keep functionality */
+        .sticky-sidebar::-webkit-scrollbar { width: 4px; }
+        .sticky-sidebar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex flex-col justify-center">
+                    <span class="text-xl md:text-3xl font-bold text-blue-900 tracking-tighter leading-none">Globus Certifications Australia</span>
+                    <span class="text-[10px] md:text-xs font-semibold text-blue-500 uppercase tracking-widest mt-1">Accredited by UAF & IAF</span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="services.html" class="text-blue-600 font-semibold transition-colors">Services</a>
+                    <a href="index.html#process" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Our Process</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">About</a>
+                    <a href="index.html#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md">Get a Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 p-2"><i data-lucide="menu"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pb-6 pt-2 space-y-4">
+            <a href="services.html" class="block text-gray-600 py-2">Services</a>
+            <a href="index.html#process" class="block text-gray-600 py-2">Our Process</a>
+            <a href="index.html#about" class="block text-gray-600 py-2">About</a>
+            <a href="index.html#contact" class="block bg-blue-600 text-white text-center py-2 rounded-md">Get a Quote</a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">Our Certification Services</h1>
+            <p class="text-gray-600 max-w-3xl">Comprehensive ISO standards and assurance solutions tailored to help Australian organisations achieve global excellence.</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            
+            <aside class="lg:w-1/4">
+                <div class="sticky top-28 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden sticky-sidebar">
+                    <div class="p-4 bg-gray-50 border-b border-gray-100">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">All Standards</span>
+                    </div>
+                    <nav class="flex flex-col">
+                        <a href="#qms" class="sidebar-link active p-4 text-xs font-medium">ISO 9001:2015 (Quality)</a>
+                        <a href="#pci" class="sidebar-link p-4 text-xs font-medium">PCI DSS</a>
+                        <a href="#ems" class="sidebar-link p-4 text-xs font-medium">ISO 14001:2015 (Env)</a>
+                        <a href="#isms" class="sidebar-link p-4 text-xs font-medium">ISO 27001:2022 (Security)</a>
+                        <a href="#social" class="sidebar-link p-4 text-xs font-medium">ISO 26000:2010 (Social)</a>
+                        <a href="#itms" class="sidebar-link p-4 text-xs font-medium">ISO 20000-1:2018 (IT)</a>
+                        <a href="#vapt" class="sidebar-link p-4 text-xs font-medium">VAPT</a>
+                        <a href="#ohs" class="sidebar-link p-4 text-xs font-medium">ISO 45001:2018 (OH&S)</a>
+                        <a href="#bcms" class="sidebar-link p-4 text-xs font-medium">ISO 22301:2019 (BCMS)</a>
+                        <a href="#fsms" class="sidebar-link p-4 text-xs font-medium">ISO 22000:2018 (Food)</a>
+                        <a href="#medical" class="sidebar-link p-4 text-xs font-medium">ISO 13485:2016 (Med)</a>
+                        <a href="#oil" class="sidebar-link p-4 text-xs font-medium">ISO 29001 (Oil & Gas)</a>
+                        <a href="#haccp" class="sidebar-link p-4 text-xs font-medium">HACCP</a>
+                        <a href="#satisfaction" class="sidebar-link p-4 text-xs font-medium">ISO 10002:2018</a>
+                        <a href="#ce" class="sidebar-link p-4 text-xs font-medium">CE Marking</a>
+                        <a href="#iec" class="sidebar-link p-4 text-xs font-medium">IEC Code for Export</a>
+                        <a href="#isae" class="sidebar-link p-4 text-xs font-medium">ISAE 3402</a>
+                        <a href="#soc" class="sidebar-link p-4 text-xs font-medium">SOC 1 & SOC 2 Reports</a>
+                        <a href="#aims" class="sidebar-link p-4 text-xs font-medium">ISO 42001:2023 (AI)</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <section class="lg:w-3/4 space-y-20">
+                
+                <div class="prose prose-blue max-w-none text-gray-600 leading-relaxed space-y-6">
+                    <p>Globus Certifications is the leading certification body worldwide. We are accredited by UAF to issue certificates in QMS, EMS, and OH&S standards in more than 30 countries.</p>
+                    <p>According to research, 98% of companies with ISO certification rated it a good investment. Certification offers clear benefits in operations, customer satisfaction, and employee engagement.</p>
+                </div>
+
+                <div id="qms" class="scroll-mt-32">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 9001:2015 (Quality Management System)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">The international standard for QMS. It focuses on meeting customer requirements and delivering consistent quality by implementing robust, process-driven management.</p>
+                </div>
+
+                <div id="pci" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-slate-700 text-white rounded-lg flex items-center justify-center"><i data-lucide="credit-card" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">PCI DSS Compliance</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">The Payment Card Industry Data Security Standard is essential for any business that accepts, processes, or stores credit card information, ensuring a secure environment.</p>
+                </div>
+
+                <div id="ems" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="leaf" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 14001:2015 (Environmental Management)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Framework for an effective Environmental Management System (EMS). It helps organisations improve resource efficiency, reduce waste, and manage environmental risks.</p>
+                </div>
+
+                <div id="isms" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-700 text-white rounded-lg flex items-center justify-center"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 27001:2022 (Information Security)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">The 2022 version of ISMS provides the latest security controls to protect information assets, including intellectual property, employee details, and third-party data.</p>
+                </div>
+
+                <div id="vapt" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-red-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="lock" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">Vulnerability Assessment & Penetration Testing</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">A comprehensive technical security audit that identifies security loopholes in your IT infrastructure before they can be exploited by cyber threats.</p>
+                </div>
+
+                <div id="bcms" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-orange-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="refresh-cw" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 22301:2019 (Business Continuity)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">The 2019 version of BCMS ensures your business can continue operating during and after a disaster or unexpected disruption.</p>
+                </div>
+
+                <div id="aims" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 42001:2023 (Artificial Intelligence)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">The world’s first AI management system standard. It provides a framework for the safe, transparent, and ethical use of AI technologies within your organisation.</p>
+                </div>
+
+                <div id="soc" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-900 text-white rounded-lg flex items-center justify-center"><i data-lucide="file-check-2" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">SOC 1 & SOC 2 Reports</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Service Organisation Control reports are essential for service providers to demonstrate they have appropriate controls in place for financial reporting (SOC 1) and data security/privacy (SOC 2).</p>
+                </div>
+
+                <div class="pt-12 border-t border-gray-100 grid md:grid-cols-2 gap-8">
+                    <div id="social">
+                        <h4 class="font-bold text-blue-900 mb-2">ISO 26000:2010</h4>
+                        <p class="text-sm text-gray-500">Guidance on Social Responsibility to help businesses operate in an ethical and transparent manner.</p>
+                    </div>
+                    <div id="medical">
+                        <h4 class="font-bold text-blue-900 mb-2">ISO 13485:2016</h4>
+                        <p class="text-sm text-gray-500">Quality management for medical devices to ensure safety and regulatory compliance.</p>
+                    </div>
+                    <div id="haccp">
+                        <h4 class="font-bold text-blue-900 mb-2">HACCP & ISO 22000</h4>
+                        <p class="text-sm text-gray-500">International food safety standards to prevent biological, chemical, and physical hazards.</p>
+                    </div>
+                    <div id="ce">
+                        <h4 class="font-bold text-blue-900 mb-2">CE Marking</h4>
+                        <p class="text-sm text-gray-500">Mandatory conformity marking for products sold in the European Economic Area (EEA).</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 py-12 border-t border-gray-200 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold text-blue-900">Globus Certifications <span class="text-blue-500 text-sm">Australia</span></span>
+                    <p class="text-gray-500 text-[10px] mt-1 tracking-wider uppercase">Your partner in excellence</p>
+                </div>
+                <p class="text-gray-400 text-[10px] mt-4">© 2026 Globus Certifications Australia. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+	<a href="https://wa.me/61420250506" 
+	   target="_blank" 
+	   class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
+	   aria-label="Chat on WhatsApp">
+		<i data-lucide="message-circle" class="w-7 h-7"></i>
+		<span class="absolute right-16 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100">
+			Chat with an Expert
+		</span>
+	</a>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
