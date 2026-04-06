@@ -10,10 +10,9 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .sidebar-link.active { border-left-color: #2563eb; color: #1e3a8a; background-color: #eff6ff; font-weight: 600; }
-        .sidebar-link { border-left: 3px solid transparent; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .sidebar-link { border-left: 3px solid transparent; transition: all 0.2s; }
         .sidebar-link:hover { background-color: #f8fafc; border-left-color: #cbd5e1; }
         .sticky-sidebar { height: calc(100vh - 120px); overflow-y: auto; }
-        /* Hide scrollbar for sidebar but keep functionality */
         .sticky-sidebar::-webkit-scrollbar { width: 4px; }
         .sticky-sidebar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
     </style>
@@ -49,137 +48,169 @@
     <header class="pt-32 pb-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">Our Certification Services</h1>
-            <p class="text-gray-600 max-w-3xl">Comprehensive ISO standards and assurance solutions tailored to help Australian organisations achieve global excellence.</p>
+            <p class="text-gray-600 max-w-3xl text-lg leading-relaxed">Comprehensive ISO standards and assurance solutions tailored to help Australian organisations achieve global excellence.</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="lg:hidden mb-8">
+            <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Jump to Standard</label>
+            <select onchange="location.hash = this.value" class="w-full p-4 bg-white border border-gray-200 rounded-xl shadow-sm outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="#iso9001">ISO 9001:2015 (QMS)</option>
+                <option value="#iso14001">ISO 14001:2015 (EMS)</option>
+                <option value="#iso45001">ISO 45001:2018 (OH&S)</option>
+                <option value="#iso20000">ISO 20000-1:2018 (ITSM)</option>
+                <option value="#iso27001">ISO 27001:2022 (ISMS)</option>
+                <option value="#iso22301">ISO 22301:2019 (BCMS)</option>
+                <option value="#iso22000">ISO 22000:2018 (FSMS)</option>
+                <option value="#iso42001">ISO 42001:2023 (AIMS)</option>
+                <option value="#iso13485">ISO 13485:2016</option>
+                <option value="#soc">SOC 1 and SOC 2</option>
+                <option value="#vapt">VAPT</option>
+                <option value="#pci">PCI-DSS</option>
+                <option value="#cmmc">CMMC & CMMI</option>
+            </select>
+        </div>
+
         <div class="flex flex-col lg:flex-row gap-12">
             
-            <aside class="lg:w-1/4">
+            <aside class="hidden lg:block lg:w-1/4">
                 <div class="sticky top-28 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden sticky-sidebar">
                     <div class="p-4 bg-gray-50 border-b border-gray-100">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">All Standards</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Service Catalog</span>
                     </div>
                     <nav class="flex flex-col">
-                        <a href="#qms" class="sidebar-link active p-4 text-xs font-medium">ISO 9001:2015 (Quality)</a>
-                        <a href="#pci" class="sidebar-link p-4 text-xs font-medium">PCI DSS</a>
-                        <a href="#ems" class="sidebar-link p-4 text-xs font-medium">ISO 14001:2015 (Env)</a>
-                        <a href="#isms" class="sidebar-link p-4 text-xs font-medium">ISO 27001:2022 (Security)</a>
-                        <a href="#social" class="sidebar-link p-4 text-xs font-medium">ISO 26000:2010 (Social)</a>
-                        <a href="#itms" class="sidebar-link p-4 text-xs font-medium">ISO 20000-1:2018 (IT)</a>
+                        <a href="#iso9001" class="sidebar-link active p-4 text-xs font-medium">ISO 9001:2015 (QMS)</a>
+                        <a href="#iso14001" class="sidebar-link p-4 text-xs font-medium">ISO 14001:2015 (EMS)</a>
+                        <a href="#iso45001" class="sidebar-link p-4 text-xs font-medium">ISO 45001:2018 (OH&S)</a>
+                        <a href="#iso20000" class="sidebar-link p-4 text-xs font-medium">ISO 20000-1:2018 (ITSM)</a>
+                        <a href="#iso27001" class="sidebar-link p-4 text-xs font-medium">ISO 27001:2022 (ISMS)</a>
+                        <a href="#iso22301" class="sidebar-link p-4 text-xs font-medium">ISO 22301:2019 (BCMS)</a>
+                        <a href="#iso22000" class="sidebar-link p-4 text-xs font-medium">ISO 22000:2018 (FSMS)</a>
+                        <a href="#iso42001" class="sidebar-link p-4 text-xs font-medium">ISO 42001:2023 (AIMS)</a>
+                        <a href="#iso13485" class="sidebar-link p-4 text-xs font-medium">ISO 13485:2016</a>
+                        <a href="#soc" class="sidebar-link p-4 text-xs font-medium">SOC 1 and SOC 2</a>
                         <a href="#vapt" class="sidebar-link p-4 text-xs font-medium">VAPT</a>
-                        <a href="#ohs" class="sidebar-link p-4 text-xs font-medium">ISO 45001:2018 (OH&S)</a>
-                        <a href="#bcms" class="sidebar-link p-4 text-xs font-medium">ISO 22301:2019 (BCMS)</a>
-                        <a href="#fsms" class="sidebar-link p-4 text-xs font-medium">ISO 22000:2018 (Food)</a>
-                        <a href="#medical" class="sidebar-link p-4 text-xs font-medium">ISO 13485:2016 (Med)</a>
-                        <a href="#oil" class="sidebar-link p-4 text-xs font-medium">ISO 29001 (Oil & Gas)</a>
-                        <a href="#haccp" class="sidebar-link p-4 text-xs font-medium">HACCP</a>
-                        <a href="#satisfaction" class="sidebar-link p-4 text-xs font-medium">ISO 10002:2018</a>
-                        <a href="#ce" class="sidebar-link p-4 text-xs font-medium">CE Marking</a>
-                        <a href="#iec" class="sidebar-link p-4 text-xs font-medium">IEC Code for Export</a>
-                        <a href="#isae" class="sidebar-link p-4 text-xs font-medium">ISAE 3402</a>
-                        <a href="#soc" class="sidebar-link p-4 text-xs font-medium">SOC 1 & SOC 2 Reports</a>
-                        <a href="#aims" class="sidebar-link p-4 text-xs font-medium">ISO 42001:2023 (AI)</a>
+                        <a href="#pci" class="sidebar-link p-4 text-xs font-medium">PCI-DSS</a>
+                        <a href="#cmmc" class="sidebar-link p-4 text-xs font-medium">CMMC & CMMI</a>
                     </nav>
                 </div>
             </aside>
 
-            <section class="lg:w-3/4 space-y-20">
+            <section class="lg:w-3/4 space-y-16">
                 
-                <div class="prose prose-blue max-w-none text-gray-600 leading-relaxed space-y-6">
-                    <p>Globus Certifications is the leading certification body worldwide. We are accredited by UAF to issue certificates in QMS, EMS, and OH&S standards in more than 30 countries.</p>
-                    <p>According to research, 98% of companies with ISO certification rated it a good investment. Certification offers clear benefits in operations, customer satisfaction, and employee engagement.</p>
-                </div>
-
-                <div id="qms" class="scroll-mt-32">
+                <div id="iso9001" class="scroll-mt-32">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
                         <h2 class="text-2xl font-bold text-blue-900">ISO 9001:2015 (Quality Management System)</h2>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">The international standard for QMS. It focuses on meeting customer requirements and delivering consistent quality by implementing robust, process-driven management.</p>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO 9001:2015 is the international standard for a Quality Management System (QMS), used by organizations of any size to ensure consistent, high-quality products and services. It focuses on risk management, customer satisfaction, and continuous improvement, applicable across all industries. Certification proves compliance with international quality standards.</p>
+                </div>
+
+                <div id="iso14001" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="leaf" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 14001:2015 (Environmental Management)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO 14001:2015 is the internationally recognized standard for Environmental Management Systems (EMS), providing a framework for organizations to improve environmental performance, reduce waste, and ensure regulatory compliance. It uses a Plan-Do-Check-Act (PDCA) approach applicable to any industry, focusing on sustainability, leadership commitment, and proactive risk management.</p>
+                </div>
+
+                <div id="iso45001" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-orange-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="hard-hat" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 45001:2018 (OH&S Management)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO 45001 is the international standard for occupational health and safety (OH&S) management systems, providing a framework to reduce work-related injuries, illnesses, and fatalities. It emphasizes leadership, worker participation, hazard identification, and risk management. It is applicable to any organization wanting to enhance safety performance and demonstrate compliance.</p>
+                </div>
+
+                <div id="iso20000" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-400 text-white rounded-lg flex items-center justify-center"><i data-lucide="settings" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 20000-1:2018 (IT Service Management)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO/IEC 20000 is the international standard for IT Service Management (ITSM), providing requirements for establishing, implementing, maintaining, and continually improving a Service Management System (SMS). It ensures organizations deliver high-quality, reliable, and efficient IT services, often aligning with ITIL best practices.</p>
+                </div>
+
+                <div id="iso27001" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-700 text-white rounded-lg flex items-center justify-center"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 27001:2022 (ISMS)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO/IEC 27001 is the international standard for information security management systems (ISMS), providing a risk-based framework to protect data confidentiality, integrity, and availability. It helps organizations identify, manage, and mitigate risks, securing assets like intellectual property and employee data.</p>
+                </div>
+
+                <div id="iso22301" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-red-700 text-white rounded-lg flex items-center justify-center"><i data-lucide="refresh-cw" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 22301:2019 (Business Continuity)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO 22301:2019 is the international standard for Business Continuity Management Systems (BCMS), specifying requirements to plan, establish, implement, operate, monitor, and maintain a documented system to protect against, reduce the likelihood of, and recover from disruptive incidents. It helps organizations ensure continuity of operations, enhance resilience, and minimize downtime.</p>
+                </div>
+
+                <div id="iso22000" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-green-800 text-white rounded-lg flex items-center justify-center"><i data-lucide="utensils" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 22000:2018 (Food Safety Management)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO 22000 is an international standard for Food Safety Management Systems (FSMS) designed to ensure safety across the entire food chain. It combines HACCP principles, prerequisite programs (PRPs), and management system requirements to help organizations identify, control, and manage food safety hazards.</p>
+                </div>
+
+                <div id="iso42001" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO/IEC 42001:2023 (Artificial Intelligence)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO/IEC 42001:2023 is the first international standard for an Artificial Intelligence Management System (AIMS), to provide a framework for responsible AI governance, risk management, and compliance. It helps organizations develop or use AI systems ethically and transparently, ensuring accountability, mitigating risks like bias, and enabling third-party certification.</p>
+                </div>
+
+                <div id="iso13485" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-slate-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="stethoscope" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">ISO 13485:2016 (Medical Devices)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ISO 13485 is the internationally recognized standard for quality management systems in the design and manufacture of medical devices. It outlines specific requirements that help organizations ensure their medical devices meet both customer and regulatory demands for safety and efficacy.</p>
+                </div>
+
+                <div id="soc" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-slate-900 text-white rounded-lg flex items-center justify-center"><i data-lucide="file-check" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">SOC 1 and SOC 2 Reports</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">SOC reports provide assurance regarding information security management systems (ISMS), using a risk-based framework to protect data confidentiality, integrity, and availability. It helps organizations identify, manage, and mitigate risks, securing assets like intellectual property and employee data.</p>
+                </div>
+
+                <div id="vapt" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-red-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="search" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">VAPT (Security Assessment)</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">Vulnerability Assessment and Penetration Testing or VAPT is a cybersecurity approach that identifies, evaluates, and mitigates risks across systems, networks, and applications. 
+                    <br><br><strong>Vulnerability Assessment (VA):</strong> Identifies and assesses known vulnerabilities without exploitation. 
+                    <br><strong>Penetration Testing (PT):</strong> Simulates real-world attacks to exploit vulnerabilities and test security controls. VAPT helps organisations proactively address weaknesses and strengthen their overall cybersecurity posture.</p>
                 </div>
 
                 <div id="pci" class="scroll-mt-32 pt-12 border-t border-gray-100">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 bg-slate-700 text-white rounded-lg flex items-center justify-center"><i data-lucide="credit-card" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">PCI DSS Compliance</h2>
+                        <h2 class="text-2xl font-bold text-blue-900">PCI-DSS Compliance</h2>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">The Payment Card Industry Data Security Standard is essential for any business that accepts, processes, or stores credit card information, ensuring a secure environment.</p>
+                    <p class="text-gray-600 leading-relaxed text-lg">PCI DSS (Payment Card Industry Data Security Standard) is a mandatory global security standard for any entity that stores, processes, or transmits credit/debit card data. It consists of 12 requirements designed to secure cardholder information, reduce fraud, and prevent breaches. Compliance involves regular assessments, network scanning, and potential audits.</p>
                 </div>
 
-                <div id="ems" class="scroll-mt-32 pt-12 border-t border-gray-100">
+                <div id="cmmc" class="scroll-mt-32 pt-12 border-t border-gray-100 pb-20">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-green-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="leaf" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">ISO 14001:2015 (Environmental Management)</h2>
+                        <div class="w-10 h-10 bg-blue-900 text-white rounded-lg flex items-center justify-center"><i data-lucide="award" class="w-6 h-6"></i></div>
+                        <h2 class="text-2xl font-bold text-blue-900">CMMC & CMMI</h2>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">Framework for an effective Environmental Management System (EMS). It helps organisations improve resource efficiency, reduce waste, and manage environmental risks.</p>
-                </div>
-
-                <div id="isms" class="scroll-mt-32 pt-12 border-t border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-indigo-700 text-white rounded-lg flex items-center justify-center"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">ISO 27001:2022 (Information Security)</h2>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">The 2022 version of ISMS provides the latest security controls to protect information assets, including intellectual property, employee details, and third-party data.</p>
-                </div>
-
-                <div id="vapt" class="scroll-mt-32 pt-12 border-t border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-red-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="lock" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">Vulnerability Assessment & Penetration Testing</h2>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">A comprehensive technical security audit that identifies security loopholes in your IT infrastructure before they can be exploited by cyber threats.</p>
-                </div>
-
-                <div id="bcms" class="scroll-mt-32 pt-12 border-t border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-orange-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="refresh-cw" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">ISO 22301:2019 (Business Continuity)</h2>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">The 2019 version of BCMS ensures your business can continue operating during and after a disaster or unexpected disruption.</p>
-                </div>
-
-                <div id="aims" class="scroll-mt-32 pt-12 border-t border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center"><i data-lucide="cpu" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">ISO 42001:2023 (Artificial Intelligence)</h2>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">The world’s first AI management system standard. It provides a framework for the safe, transparent, and ethical use of AI technologies within your organisation.</p>
-                </div>
-
-                <div id="soc" class="scroll-mt-32 pt-12 border-t border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-blue-900 text-white rounded-lg flex items-center justify-center"><i data-lucide="file-check-2" class="w-6 h-6"></i></div>
-                        <h2 class="text-2xl font-bold text-blue-900">SOC 1 & SOC 2 Reports</h2>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">Service Organisation Control reports are essential for service providers to demonstrate they have appropriate controls in place for financial reporting (SOC 1) and data security/privacy (SOC 2).</p>
-                </div>
-
-                <div class="pt-12 border-t border-gray-100 grid md:grid-cols-2 gap-8">
-                    <div id="social">
-                        <h4 class="font-bold text-blue-900 mb-2">ISO 26000:2010</h4>
-                        <p class="text-sm text-gray-500">Guidance on Social Responsibility to help businesses operate in an ethical and transparent manner.</p>
-                    </div>
-                    <div id="medical">
-                        <h4 class="font-bold text-blue-900 mb-2">ISO 13485:2016</h4>
-                        <p class="text-sm text-gray-500">Quality management for medical devices to ensure safety and regulatory compliance.</p>
-                    </div>
-                    <div id="haccp">
-                        <h4 class="font-bold text-blue-900 mb-2">HACCP & ISO 22000</h4>
-                        <p class="text-sm text-gray-500">International food safety standards to prevent biological, chemical, and physical hazards.</p>
-                    </div>
-                    <div id="ce">
-                        <h4 class="font-bold text-blue-900 mb-2">CE Marking</h4>
-                        <p class="text-sm text-gray-500">Mandatory conformity marking for products sold in the European Economic Area (EEA).</p>
-                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg"><strong>CMMC:</strong> The Cybersecurity Maturity Model Certification (CMMC) 2.0 is a US DoD framework designed to enforce security standards for contractors handling sensitive information. It streamlines requirements into three tiers requiring assessment to protect the defense supply chain.
+                    <br><br><strong>CMMI:</strong> Capability Maturity Model Integration is a globally accepted framework to improve organizational processes, capability, and performance. It enables organizations to build, measure, and optimize capabilities, resulting in higher quality products and services. CMMI uses maturity levels (1-5) or capability levels (0-3) to assess improvement.</p>
                 </div>
 
             </section>
         </div>
     </main>
 
-    <footer class="bg-gray-100 py-12 border-t border-gray-200 mt-20">
+    <footer class="bg-gray-100 py-12 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0">
                 <div class="flex flex-col">
@@ -188,34 +219,36 @@
                 </div>
                 <p class="text-gray-400 text-[10px] mt-4">© 2026 Globus Certifications Australia. All rights reserved.</p>
             </div>
-            <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="linkedin"></i></a>
-                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="twitter"></i></a>
-                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="facebook"></i></a>
-            </div>
         </div>
     </footer>
-	<a href="https://wa.me/61420250506" 
-	   target="_blank" 
-	   class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
-	   aria-label="Chat on WhatsApp">
-		<i data-lucide="message-circle" class="w-7 h-7"></i>
-		<span class="absolute right-16 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100">
-			Chat with an Expert
-		</span>
-	</a>
+
+    <a href="https://wa.me/61420250506" target="_blank" class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="absolute right-16 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100">Chat with an Expert</span>
+    </a>
 
     <script>
         lucide.createIcons();
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        
+
+        // Sidebar active state logic
         const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        sidebarLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                sidebarLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section > div[id]').forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
